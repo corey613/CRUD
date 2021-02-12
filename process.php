@@ -8,7 +8,7 @@ $update = false;
 $id = 0;
 
 
-$mysqli = new mysqli("localhost", "root", '',"crud") or die(mysqli_error($mysqli));
+$mysqli = new mysqli("localhost:3306", "", '',"");
 
 if(isset($_POST["save"])){
     $name = $_POST["name"];
@@ -25,8 +25,7 @@ if(isset($_POST["save"])){
 
 if(isset($_GET['delete'])){
     $id = $_GET['delete'];
-    $mysqli->query("DELETE FROM data WHERE id=$id") or 
-    die($mysqli->error());
+    $mysqli->query("DELETE FROM data WHERE id=$id");
 
     $_SESSION['message'] = 'This record has been deleted!';
     $_SESSION['msg_type'] = 'delete';
@@ -52,7 +51,7 @@ if(isset($_POST['update'])){
     $age = $_POST['age'];
     
     $mysqli->query("UPDATE data SET name='$name', age='$age' WHERE id=$id ");
-    $_SESSION['message'] = 'Record has been updated';
+    $_SESSION['message'] = 'Record has been updated!';
     $_SESSION['msg_type'] = 'update';
 
     header('location: index.php');
