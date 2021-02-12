@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="crudstyle.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 </head>
@@ -62,8 +62,8 @@
         
 
     <?php
-        $mysqli = new mysqli("localhost", "root", '',"crud") or die(mysqli_error($mysqli));
-        $result = $mysqli->query("SELECT * FROM data") or die($mysqli->error);
+        $mysqli = new mysqli("localhost:3306", "", '',"");
+        $result = $mysqli->query("SELECT * FROM data");
      
     	 ?>
 
