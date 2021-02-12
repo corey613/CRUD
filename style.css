@@ -1,0 +1,189 @@
+:root {
+    --blue: #1a84ee;
+
+  }
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center; 
+}
+
+.alert{
+    width: 100vw;
+    height: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    text-indent: 30px;
+}
+
+.alert-success{
+    background: rgba(124, 185, 33, 0.692);
+}
+
+
+.alert-delete{
+    background: rgba(219, 47, 17, 0.692);
+}
+
+.alert-update{
+    background: rgba(25, 131, 163, 0.692);
+}
+
+
+#display{
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 90vw;
+    border-collapse: collapse;
+    margin-top: 30px;
+  }
+
+  table, th, td {
+    border-top: 3px solid rgba(149, 149, 149, 0.3);
+    border-bottom: 3px solid rgba(149, 149, 149, 0.3);
+    padding: 10px;
+    text-align: start;
+    font-size: 20px;
+  }
+
+    .col2{
+        text-align: center;
+    }
+  td{
+
+  text-align: start;
+  font-size: 20px;
+      
+  }
+
+  .editBtn{
+      background: rgba(124, 185, 33, 0.692);
+      padding: 0 20px;
+      border-radius: 5px;
+      margin: 0 5px;
+  }
+
+
+  #delete{
+    background: rgba(219, 47, 17, 0.692);
+    padding: 0 20px;
+    border-radius: 5px;
+  } 
+  a{
+      text-decoration: none;
+      color: black;
+  }
+
+
+
+form{
+    width: 90vw;
+     display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 30px;
+   
+}
+
+.label{
+    font-size: 18px;
+    margin: 5px 10px;
+}
+
+.input{
+    width: 150px;
+    height: 30px;
+    text-indent: 5px;
+    border-radius: 10px;
+    border: solid 1px var(--blue);
+    outline: none;
+  
+}
+
+#save{
+    width: 100px;
+    height: 30px;
+    font-size: 18px;
+    background: var(--blue);
+    border: none;
+    outline: none;
+    color: white;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+#update{
+    width: 100px;
+    height: 30px;
+    font-size: 18px;
+    background: rgb(103, 68, 255);
+    border: none;
+    outline: none;
+    color: white;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+#save:hover{
+    background: #3b9bfa;
+}
+
+
+#update:hover{
+    background: rgb(120, 92, 246);
+}
+
+.input::placeholder{
+    color: var(--blue);
+    text-indent: 5px;
+}
+
+
+@media screen and (max-width: 600px){
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .label{
+        font-size: 16px;
+        margin: 5px 0px;
+    }
+
+    #save{
+        width: 60px;
+        height: 25px;
+        font-size: 16px;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+
+    #update{
+        width: 60px;
+        height: 25px;
+        font-size: 16px;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    
+    
+
+}
